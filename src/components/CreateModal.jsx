@@ -1,9 +1,9 @@
-import React from 'react';
-import { Dialog, Transition } from '@headlessui/react'
-import { Fragment, useState } from 'react'
+import React from "react";
+import { Dialog, Transition } from "@headlessui/react";
+import { Fragment, useState } from "react";
 
 const CreateModal = () => {
-  let [isOpen, setIsOpen] = useState(true);
+  let [isOpen, setIsOpen] = useState(false);
 
   function closeModal() {
     setIsOpen(false);
@@ -13,14 +13,14 @@ const CreateModal = () => {
     setIsOpen(true);
   }
   return (
-    <>
-        <button
-          type="button"
-          onClick={openModal}
-          className="flex justify-center items-center bg-green-600 w-32 h-32 rounded text-2xl"
-        >
-          Create 
-        </button>
+    <div className="flex justify-center items-center bg-green-600 w-32 h-32 rounded text-2xl">
+      <button
+        type="button"
+        onClick={openModal}
+        className="flex justify-center items-center bg-green-600 w-32 h-32 rounded text-2xl"
+      >
+        Create
+      </button>
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
           <Transition.Child
@@ -46,41 +46,30 @@ const CreateModal = () => {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
-                  <Dialog.Title
-                    as="h3"
-                    className="text-lg font-medium leading-6 text-gray-900"
-                  >
-                    Create!
-                  </Dialog.Title>
-                  <div className="mt-2">
-                    <p className="text-sm text-gray-500">
-                      Select either a group or a
-                    </p>
-                  </div>
-
-                  <div className="flex justify-evenly">
-                    <button
-                      type="button"
-                      className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-                      onClick={closeModal}
-                    >
-                      Create Group
-                    </button>
-                    <button
-                      type="button"
-                      className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-                      onClick={closeModal}
-                    >
-                      Create Single
-                    </button>
-                    <button
-                      type="button"
-                      className="inline-flex justify-center rounded-md border border-transparent bg-red-100 px-4 py-2 text-sm font-medium text-red-900 hover:bg-red-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2"
-                      onClick={closeModal}
-                    >
-                      X
-                    </button>
+                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 align-middle shadow-xl transition-all">
+                  <div className="flex flex-col gap-y-3">
+                    <div>
+                      <Dialog.Title
+                        as="h1"
+                        className="flex items-center justify-center text-lg font-medium leading-6 text-gray-900"
+                      >
+                        Create!
+                      </Dialog.Title>
+                    </div>
+                    <div className="flex justify-evenly">
+                      <a
+                        href = "/CreateGroup"
+                        className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                      >
+                        Create Group
+                      </a>
+                      <a
+                        href = "/CreateList"
+                        className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                      >
+                        Create Single
+                      </a>
+                    </div>
                   </div>
                 </Dialog.Panel>
               </Transition.Child>
@@ -88,8 +77,8 @@ const CreateModal = () => {
           </div>
         </Dialog>
       </Transition>
-    </>
+    </div>
   );
-}
+};
 
 export default CreateModal;
