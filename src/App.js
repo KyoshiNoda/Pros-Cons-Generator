@@ -1,8 +1,8 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage";
-import Group from "./pages/Group";
-import List from "./pages/List";
+import ViewGroup from "./pages/ViewGroup";
+import ViewList from "./pages/ViewList";
 import CreateGroup from "./pages/CreateGroup";
 import CreateList from "./pages/CreateList";
 function App() {
@@ -10,8 +10,8 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/Group" element={<Group />} />
-        <Route path = "/List" element = {<List/>}/>
+        <Route path="/ViewGroup" element={<ViewGroup />} />
+        <Route path = "/ViewList" element = {<ViewList/>}/>
         <Route path = "/CreateGroup" element = {<CreateGroup/>}/>
         <Route path = "/CreateList" element = {<CreateList/>}/>
       </Routes>
