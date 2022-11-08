@@ -4,7 +4,7 @@ import Homepage from "./pages/Homepage";
 import ViewGroup from "./pages/ViewGroup";
 import ViewList from "./pages/ViewList";
 import CreateGroup from "./pages/CreateGroup";
-import CreateList from "./pages/CreateList";
+import CreateSingle from "./pages/CreateSingle";
 function App() {
   return (
     <>
@@ -13,7 +13,7 @@ function App() {
         <Route path="/ViewGroup" element={<ViewGroup />} />
         <Route path = "/ViewList" element = {<ViewList/>}/>
         <Route path = "/CreateGroup" element = {<CreateGroup/>}/>
-        <Route path = "/CreateList" element = {<CreateList/>}/>
+        <Route path = "/CreateList" element = {<CreateSingle/>}/>
       </Routes>
     </>
   );

@@ -13,11 +13,11 @@ const CreateModal = () => {
     setIsOpen(true);
   }
   return (
-    <div className="flex justify-center items-center bg-green-600 w-32 h-32 rounded text-2xl">
+    <div className="flex justify-center items-center bg-blue-500 w-32 h-32 rounded text-4xl">
       <button
         type="button"
         onClick={openModal}
-        className="flex justify-center items-center bg-green-600 w-32 h-32 rounded text-2xl"
+        className="flex justify-center items-center text-white bg-blue-500 w-32 h-32 rounded"
       >
         Create
       </button>
@@ -51,7 +51,7 @@ const CreateModal = () => {
                     <div>
                       <Dialog.Title
                         as="h1"
-                        className="flex items-center justify-center text-lg font-medium leading-6 text-gray-900"
+                        className="flex items-center justify-center text-2xl font-medium leading-6 text-gray-900"
                       >
                         Create!
                       </Dialog.Title>
