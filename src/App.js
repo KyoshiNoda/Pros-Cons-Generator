@@ -13,7 +13,7 @@ function App() {
         <Route path="/ViewGroup" element={<ViewGroup />} />
         <Route path = "/ViewList" element = {<ViewList/>}/>
         <Route path = "/CreateGroup" element = {<CreateGroup/>}/>
-        <Route path = "/CreateList" element = {<CreateSingle/>}/>
+        <Route path = "/CreateSingle" element = {<CreateSingle/>}/>
       </Routes>
     </>
   );
