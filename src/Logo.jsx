@@ -2,11 +2,11 @@ import React from "react";
 import logo from "../src/imgs/logo.png";
 function Logo() {
   return (
-    <a href="/">
-      <div className="block h-24 w-24">
-        <img src={logo} alt="logo" />
-      </div>
-    </a>
+    <div className="h-24 w-24">
+      <a href="/">
+          <img src={logo} alt="logo" />
+      </a>
+    </div>
   );
 }
 

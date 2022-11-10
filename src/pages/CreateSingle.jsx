@@ -1,24 +1,29 @@
 import React from "react";
 import Logo from "../Logo";
+import ProSingle from "../components/CreateSingle/ProSingle";
+import ConSingle from "../components/CreateSingle/ConSingle";
 function CreateSingle() {
   return (
-    <div className="w-screen h-screen bg-purple-500">
-      <Logo/>
-      <div className="flex items-center justify-center">
-        <div className="bg-gray-100 h-56 w-96 rounded">
-          <h1 className="flex justify-center text-3xl">Pros Cons Generator</h1>
-          <div className="flex justify-evenly p-4">
-            <div className="flex justify-center items-center bg-green-500 h-40 w-20 rounded text-white text-2xl">
-              Pros
-            </div>
+    <>
+      <Logo />
+      <div className="flex justify-center bg-blue-100 w-screen h-screen">
+        <div className="flex flex-col h-1/2 w-1/2 bg-slate-400 rounded items-center gap-y-5">
+          <h1 className="text-4xl text-white ">Create Single</h1>
 
-            <div className="flex justify-center items-center bg-red-500 h-40 w-20 rounded text-white text-2xl">
-              Cons
-            </div>
+          <div className="flex h-3/4 w-3/4">
+            <ProSingle />
+            <ConSingle />
           </div>
+
+          <button
+            type="button"
+            class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+          >
+            Submit
+          </button>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
