@@ -2,11 +2,11 @@ import React from "react";
 import Logo from "../Logo";
 import ProSingle from "../components/CreateSingle/ProSingle";
 import ConSingle from "../components/CreateSingle/ConSingle";
+import Card from '../components/Card';
+
 function CreateSingle() {
   return (
-    <>
-      <Logo />
-      <div className="flex justify-center bg-blue-100 w-screen h-screen">
+    <Card>
         <div className="flex flex-col h-1/2 w-1/2 bg-slate-400 rounded items-center gap-y-5">
           <h1 className="text-4xl text-white ">Create Single</h1>
 
@@ -22,8 +22,7 @@ function CreateSingle() {
             Submit
           </button>
         </div>
-      </div>
-    </>
+    </Card>
   );
 }
 
