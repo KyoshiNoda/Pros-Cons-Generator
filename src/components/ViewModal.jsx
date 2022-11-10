@@ -13,11 +13,11 @@ const ViewModal = () => {
     setIsOpen(true);
   }
   return (
-    <div className="flex justify-center items-center bg-cyan-500 w-32 h-32 rounded text-4xl">
+    <>
       <button
         type="button"
         onClick={openModal}
-        className="flex justify-center items-center bg-cyan-500 text-white w-32 h-32 rounded"
+        className="flex justify-center items-center bg-cyan-500 hover:bg-cyan-700 w-40 h-40 md:w-60 md:h-60 lg:w-96 lg:h-96 rounded-2xl text-4xl text-white"
       >
         View
       </button>
@@ -77,7 +77,7 @@ const ViewModal = () => {
           </div>
         </Dialog>
       </Transition>
-    </div>
+    </>
   );
 };
 

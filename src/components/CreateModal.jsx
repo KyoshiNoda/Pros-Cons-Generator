@@ -13,11 +13,11 @@ const CreateModal = () => {
     setIsOpen(true);
   }
   return (
-    <div className="flex justify-center items-center bg-blue-500 w-32 h-32 rounded text-4xl">
+    <>
       <button
         type="button"
         onClick={openModal}
-        className="flex justify-center items-center text-white bg-blue-500 w-32 h-32 rounded"
+        className="flex justify-center items-center bg-blue-500 hover:bg-blue-800 w-40 h-40 md:w-60 md:h-60 lg:w-96 lg:h-96 rounded-2xl text-4xl text-white"
       >
         Create
       </button>
@@ -77,7 +77,7 @@ const CreateModal = () => {
           </div>
         </Dialog>
       </Transition>
-    </div>
+    </>
   );
 };
 
